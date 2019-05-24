@@ -1,0 +1,9 @@
+
+<ul id = "user">
+    <% @user.each do |c| %>
+    <li>
+        <i> <%= link_to c.email, {:action => "show", :id => c.id} %> </i>
+        <i> <%= link_to 'Delete', {:action => "delete", :id => c.id} %></i>
+    </li>
+    <% end %>
+</ul>
